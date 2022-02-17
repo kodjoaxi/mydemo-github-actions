@@ -1,0 +1,35 @@
+microservice: 
+  - app: user-authentication
+    port: 8999
+    version: 1.2
+    deployed: false
+
+  - app: shopping-cart
+    port: 9000
+    versions: 
+    - 1.0
+    - 2.1
+    - 2.2
+microservices:
+  - user-authentication
+  - shopping-cart
+
+
+#ceci est un commentaire en YAML
+
+# this is a multiline string
+
+multilineString: |
+  this is a long long
+  that shuld be all on on line
+  in planet earth.
+
+command:
+  - /bin/sh
+  - -ec
+  - >-
+    mysql -h 127.0.0.1 -u root -p$MYSQL_ROOT_PASSWORD -e 'select 1'
+
+---
+
+#on peut ajouter d'autres compsants en bas
